@@ -1,2 +1,13 @@
-# snack-builder
-A React application that recommends snack options based on calorie budget and hunger level, helping users make quick, practical food choices
+# Snack Builder
+
+A simple React app that suggests snack options based on calorie budget and hunger level. Currently in early development.
+
+## Features
+- Calorie input
+- Hunger level selector
+- Smart snack suggestions
+
+## Tech Stack
+- React
+- JavaScript
+- CSS
