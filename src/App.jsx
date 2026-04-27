@@ -1,10 +1,10 @@
+import SnackBuilder from "./components/SnackBuilder.jsx";
 
 function App() {
-  return (
-    <div>
-      <h1>Snack Builder</h1>
-    </div>
-  );
+
+    return (
+        <SnackBuilder/>
+    );
 }
 
 export default App
