@@ -4,6 +4,8 @@ export default function SnackBuilder() {
     const [calories, setCalories] = useState('150');
     const [hunger, setHunger] = useState('medium'); // use hunger-satiety scale
     const [results, setResults] = useState([]);
+    const [hasSearched, setHasSearched] = useState(false);
+
     const snacks = [
         {name: "Greek yogurt + berries", calories: 150, filling: "high"},
         {name: "Apple + peanut butter", calories: 200, filling: "medium"},
@@ -24,6 +26,7 @@ export default function SnackBuilder() {
     ];
 
     function generateSnacks() {
+        setHasSearched(true);
         // keeps only snacks that are less than or equal to input calorie limit
         const filtered = snacks.filter((snack) => snack.calories <= calories);
 
@@ -31,7 +34,7 @@ export default function SnackBuilder() {
         const matched = filtered.filter((snack) => snack.filling === hunger);
 
         // take the top 3 results and save to state
-        setResults(matched.slice(0, 3)); // what happens if less than three??? Or none?
+        setResults(matched.slice(0, 3));
     }
 
     return (
@@ -48,6 +51,7 @@ export default function SnackBuilder() {
                 <option value="high">Very Hungry</option>
             </select>
             <button onClick={generateSnacks}>Suggest Snacks</button>
+            {hasSearched && results.length === 0 ? <p>"No snacks found 🙁"</p> : null}
             <ul>
                 {results.map((snack, index) => (
                     <li key={index}>
