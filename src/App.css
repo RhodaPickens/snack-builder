@@ -1,5 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+.card {
+    background: white;
     padding: 20px;
+    border-radius: 10px;
 }
