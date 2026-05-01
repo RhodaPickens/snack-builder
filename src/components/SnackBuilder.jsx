@@ -30,7 +30,9 @@ export default function SnackBuilder() {
                     hunger={hunger}
                     setHunger={setHunger}
                 />
-                <button onClick={generateSnacks}>Suggest Snacks</button>
+                <div className="button-container">
+                    <button onClick={generateSnacks}>Suggest Snacks</button>
+                </div>
                 {hasSearched && results.length === 0 ? <p>"No snacks found 🙁"</p> : null}
                 <ul>
                     {results.map((snack, index) => (
