@@ -16,8 +16,8 @@ export default function SnackBuilder() {
         // keeps only snacks that match input hunger level
         const matched = filtered.filter((snack) => snack.filling === hunger);
 
-        // take the top 3 results and save to state
-        setResults(matched.slice(0, 3));
+        // take the top 5 results and save to state
+        setResults(matched.slice(0, 5));
     }
 
     return (
