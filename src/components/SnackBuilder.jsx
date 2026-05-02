@@ -34,7 +34,7 @@ export default function SnackBuilder() {
                     <button onClick={generateSnacks}>Suggest Snacks</button>
                 </div>
                 {hasSearched && results.length === 0 ? <p>"No snacks found 🙁"</p> : null}
-                <ul>
+                <ul className="suggestions">
                     {results.map((snack, index) => (
                         <li key={index}>
                             {snack.name} ({snack.calories} cal)

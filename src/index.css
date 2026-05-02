@@ -1,5 +1,13 @@
 body {
-    font-family: Tahoma, Helvetica, sans-serif;
+    font-family: "Atma", Helvetica, sans-serif;
+}
+
+input,
+button,
+textarea,
+option,
+select {
+    font-family: inherit;
 }
 
 h1 {
