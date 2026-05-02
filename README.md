@@ -19,5 +19,5 @@ A simple React app that suggests snack options based on calorie budget and hunge
 
 ## Running the Project Locally
 
-npm install
+npm install  
 npm run dev
